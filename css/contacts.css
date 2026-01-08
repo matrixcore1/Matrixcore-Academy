@@ -1,0 +1,134 @@
+/* ===== PAGE BANNER ===== */
+.page-banner {
+  height: 300px;
+  background: url("../images/banner.jpeg") center/cover;
+  position: relative;
+}
+
+.banner-overlay {
+  background: rgba(0,0,0,0.6);
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+}
+
+.banner-overlay h1 {
+  font-size: 36px;
+}
+
+.banner-overlay span {
+  color: #ff9800;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-page {
+  padding: 80px 30px;
+  background: #ffffff;
+}
+
+.contact-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+}
+
+.contact-form {
+  flex: 1.2;
+}
+
+.section-tag {
+  color: #ff9800;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.contact-form h2 {
+  margin: 15px 0;
+  font-size: 32px;
+}
+
+.form-desc {
+  color: #555;
+  margin-bottom: 35px;
+}
+
+.form-row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 5px;
+}
+
+.contact-form textarea {
+  height: 90px;
+  resize: none;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 12px 36px;
+  border: 2px solid #0b5ed7;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+.success-msg {
+  display: none;
+  margin-top: 15px;
+  color: green;
+  font-weight: 600;
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info {
+  flex: 0.8;
+  background: #f8f9fb;
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.contact-info h3 {
+  margin-bottom: 20px;
+}
+
+.info-block {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .banner-overlay {
+    padding: 0 20px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 26px;
+  }
+}

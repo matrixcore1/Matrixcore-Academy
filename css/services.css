@@ -1,0 +1,141 @@
+/* ================= SERVICES PAGE ================= */
+
+/* BANNER */
+.services-banner {
+  background: linear-gradient(
+      rgba(15,30,46,0.85),
+      rgba(15,30,46,0.85)
+    ),
+    url("../images/banner.jpeg") center/cover;
+  padding: 90px 30px;
+  color: #fff;
+}
+
+.banner-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.banner-content h1 {
+  font-size: 42px;
+}
+
+.banner-content span {
+  color: #ff9800;
+}
+
+/* INTRO */
+.services-intro {
+  background: #ffffff;
+  padding: 70px 30px;
+}
+
+.services-intro-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.services-intro h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.services-intro p {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* SERVICE CARDS */
+.services-cards-section {
+  background: #f9fafb;
+  padding: 70px 30px;
+}
+
+.services-cards {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.service-card .icon {
+  width: 70px;
+  height: 70px;
+  background: #ff9800;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* WHY SECTION */
+.services-why {
+  background: #ffffff;
+  padding: 70px 30px;
+}
+
+.why-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.why-container h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.why-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.why-container li {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* ACTIVE MENU */
+.nav-menu a.active {
+  color: #ff9800;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .services-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-content h1 {
+    font-size: 32px;
+  }
+}
