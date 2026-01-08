@@ -2,28 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact - Matrixcore Academy</title>
+  <title>Contact Us | Matrixcore Academy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- MAIN SITE CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- CONTACT PAGE CSS -->
+  <link rel="stylesheet" href="css/contacts.css">
 </head>
 <body>
-  <header>
-    <div class="logo">Matrixcore <span>Academy</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="internships.html">Internships</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <main class="section">
-    <h1>Contact Us</h1>
-    <p>Email: info@matrixcoreacademy.in</p>
-    <p>Phone: +91 9XXXXXXXXX</p>
-  </main>
+<!-- SPLIT TOP BAR -->
+<div class="top-bar-split">
+  <div class="top-left">
+    📞 Call: +91 96634 76586
+  </div>
+  <div class="top-right">
+    ✉ Email: matrixcoreacademy.in
+  </div>
+</div>
 
-  <script src="js/main.js"></script>
+<header class="main-header">
+  <div class="logo">
+    Matrixcore <span>Academy</span>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<!-- ===== PAGE BANNER ===== -->
+<section class="page-banner">
+  <div class="banner-overlay">
+    <h1>Feel Free To Call Us For Future Ready Strategies</h1>
+    <p>🏠 Home / <span>Lets grow together</span></p>
+  </div>
+</section>
+
+<!-- ===== CONTACT CONTENT ===== -->
+<section class="contact-page">
+  <div class="contact-wrapper">
+
+    <!-- LEFT FORM -->
+    <div class="contact-form">
+      <span class="section-tag">GET IN TOUCH</span>
+      <h2>Get in touch with us to see what we can do for you?</h2>
+
+      <p class="form-desc">
+        We are a team of professional and skilled experts in academic and technical domains.
+        We help students with training, internships, and final-year projects.
+      </p>
+
+      <form 
+        id="enquiryForm"
+        onsubmit="submitEnquiry(event)">
+
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="tel" name="phone" placeholder="Phone No" required>
+        </div>
+
+        <div class="form-row">
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="location" placeholder="Location" required>
+        </div>
+
+        <textarea name="message" placeholder="Message"></textarea>
+
+        <button type="submit">SUBMIT</button>
+      </form>
+
+      <p id="successMsg" class="success-msg">
+        Thank you! Our representative will contact you soon.
+      </p>
+    </div>
+
+    <!-- RIGHT INFO -->
+    <div class="contact-info">
+      <h3>Contact Info</h3>
+
+      <div class="info-block">
+        <strong>Address:</strong>
+        <p>
+          Matrixcore Academy<br>
+          Bangalore, Karnataka, India - 560056
+        </p>
+      </div>
+
+      <div class="info-block">
+        📞 +91 96634 76586
+      </div>
+
+      <div class="info-block">
+        ✉ info@matrixcoreacademy.in
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- COLUMN 1 -->
+    <div class="footer-col">
+      <img src="images/white.jpeg" class="footer-logo" alt="Matrixcore Academy">
+      <p>
+        Matrixcore Academy provides academic training, internships,
+        and final-year project support for engineering and science students.
+      </p>
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div class="footer-col footer-links">
+      <h4><span>|</span> Our Services</h4>
+      <ul>
+        <li><a href="services.html">Projects for Students</a></li>
+        <li><a href="services.html">Internship Programs</a></li>
+       
+      </ul>
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div class="footer-col">
+      <h4><span>|</span> Call</h4>
+      <h2>+91 96634 76586</h2>
+      <p>For more details contact us</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 <span>Matrixcore Academy</span>. All Rights Reserved.</p>
+    <div class="footer-social">
+      <a href="#">Fb</a>
+      <a href="#">Tw</a>
+      <a href="#">In</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ===== FORM SCRIPT ===== -->
+<script>
+function submitEnquiry(event) {
+  event.preventDefault();
+
+  const form = document.getElementById("enquiryForm");
+  const successMsg = document.getElementById("successMsg");
+  const formData = new FormData(form);
+
+  fetch("https://script.google.com/macros/s/AKfycbxDFfyLrGXpUXyqYMwaxE8ZzeBiSW9Zsf9lp3cIl3g73kROPd4kqx1AseZ_hQGhlr4myg/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(() => {
+    successMsg.style.display = "block";
+    form.reset();
+  })
+  .catch(() => alert("Submission failed. Try again."));
+}
+</script>
+
 </body>
 </html>
